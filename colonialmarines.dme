@@ -757,6 +757,7 @@
 #include "code\game\area\LV624.dm"
 #include "code\game\area\prison.dm"
 #include "code\game\area\Prison_Station_FOP.dm"
+#include "code\game\area\Prison_Station_FOP_RU.dm"
 #include "code\game\area\prison_v3_fiorina.dm"
 #include "code\game\area\shiva.dm"
 #include "code\game\area\shuttles.dm"
