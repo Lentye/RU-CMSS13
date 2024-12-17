@@ -26,7 +26,7 @@
 	can_be_revived = FALSE
 
 	tackle_min = 3
-	tackle_max = 4
+	tackle_max = 5
 	tacklestrength_min = 3
 	tacklestrength_max = 4
 
