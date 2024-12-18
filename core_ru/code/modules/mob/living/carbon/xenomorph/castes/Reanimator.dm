@@ -4,7 +4,7 @@
 	melee_damage_lower = XENO_DAMAGE_TIER_1
 	melee_damage_upper = XENO_DAMAGE_TIER_2
 	melee_vehicle_damage = XENO_DAMAGE_TIER_2
-	max_health = XENO_HEALTH_TIER_4
+	max_health = XENO_HEALTH_TIER_5
 	plasma_gain = 0 //Вообще не регенит плазму сам, палагается на других
 	plasma_max = XENO_PLASMA_TIER_10*2
 	xeno_explosion_resistance = XENO_NO_EXPLOSIVE_ARMOR
@@ -14,12 +14,12 @@
 
 	build_time_mult = 2
 
-	caste_desc = "A support specie created by unstable chemical mutations. Dont regain plasma itself, weaker then drone at combat but faster."
+	caste_desc = "A support specie created by unstable chemical mutations. Dont regain plasma itself, in-between drone and runner at power."
 	evolution_allowed = FALSE
 	deevolves_to = FALSE
 	can_hold_facehuggers = 1
 	can_hold_eggs = CAN_HOLD_TWO_HANDS
-	acid_level = 3
+	acid_level = 3 //бойлер класс
 	caste_luminosity = 2
 	weed_level = WEED_LEVEL_STANDARD
 	max_build_dist = 1
@@ -43,7 +43,7 @@
 	caste_type = XENO_CASTE_REANIMATOR
 	name = XENO_CASTE_REANIMATOR
 	desc = "An alien reanimator"
-	icon = 'icons/mob/xenos/reanimator.dmi'
+	icon = 'core_ru/icons/mob/xenos/Reanimator.dmi'
 	icon_size = 48
 	icon_state = "Reanimator Walking"
 	plasma_types = list(PLASMA_PURPLE, PLASMA_PHEROMONE, PLASMA_CATECHOLAMINE)
@@ -58,22 +58,20 @@
 		/datum/action/xeno_action/activable/tail_stab,
 		/datum/action/xeno_action/activable/corrosive_acid/strong,
 		/datum/action/xeno_action/onclick/emit_pheromones,
-		/datum/action/xeno_action/activable/place_construction,
-		//first macro
-		//second macro
-		//third macro
-		/datum/action/xeno_action/onclick/choose_resin, //fourth macro
-		/datum/action/xeno_action/activable/secrete_resin, //fifth macro
+		/datum/action/xeno_action/onclick/toggle_long_range/reanimator,
+		/datum/action/xeno_action/activable/place_construction/not_primary,
+		/datum/action/xeno_action/activable/chem_empower,//first macro
+		// /datum/action/xeno_action/activable/needle_fire second macro
+		// /datum/action/xeno_action/activable/reanimate third macro
+		/datum/action/xeno_action/onclick/choose_resin/reanimator_macro, //fourth macro
+		/datum/action/xeno_action/activable/secrete_resin/reanimator_macro, //fifth macro
 		/datum/action/xeno_action/onclick/tacmap,
 		)
 	inherent_verbs = list(
 		/mob/living/carbon/xenomorph/proc/vent_crawl,
-		/mob/living/carbon/xenomorph/proc/rename_tunnel,
-		/mob/living/carbon/xenomorph/proc/set_hugger_reserve_for_morpher,
 	)
 
-	icon_xeno = 'icons/mob/xenos/reanimator.dmi'
-	icon_xenonid = 'icons/mob/xenonids/reanimator.dmi'
+	icon_xeno = 'core_ru/icons/mob/xenos/Reanimator.dmi'
 	weed_food_icon = 'icons/mob/xenos/weeds_48x48.dmi'
 	weed_food_states = list("Reanimator_1","Reanimator_2","Reanimator_3")
 	weed_food_states_flipped = list("Reanimator_1","Reanimator_2","Reanimator_3")
