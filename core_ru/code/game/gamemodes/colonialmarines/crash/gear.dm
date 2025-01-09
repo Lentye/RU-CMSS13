@@ -9,6 +9,8 @@
 
 /datum/equipment_preset/synth/uscm/crash
 	name = "Special Ship Support Synthetic"
+	assignment = JOB_CRASH_SYNTH
+	rank = JOB_CRASH_SYNTH
 
 /datum/equipment_preset/synth/uscm/crash/load_gear(mob/living/carbon/human/new_human)
 
@@ -173,8 +175,8 @@
 	name = "USCMCS Squad Rifleman"
 
 	access = list(ACCESS_MARINE_PREP)
-	assignment = JOB_SQUAD_MARINE
-	rank = JOB_SQUAD_MARINE
+	assignment = JOB_CRASH_SQUAD_MARINE
+	rank = JOB_CRASH_SQUAD_MARINE
 	paygrades = list(PAY_SHORT_ME2 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "RFN"
 	skills = /datum/skills/pfc
@@ -199,8 +201,8 @@
 	name = "USCMCS Squad Squad Weapons Specialist"
 
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_SPECPREP)
-	assignment = JOB_SQUAD_SPECIALIST
-	rank = JOB_SQUAD_SPECIALIST
+	assignment = JOB_CRASH_SQUAD_SPECIALIST
+	rank = JOB_CRASH_SQUAD_SPECIALIST
 	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "Spc"
 	skills = /datum/skills/specialist
@@ -233,8 +235,8 @@
 	name = "USCMCS Squad Smartgunner"
 
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_SMARTPREP)
-	assignment = JOB_SQUAD_SMARTGUN
-	rank = JOB_SQUAD_SMARTGUN
+	assignment = JOB_CRASH_SQUAD_SMARTGUNNER
+	rank = JOB_CRASH_SQUAD_SMARTGUNNER
 	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "SG"
 	skills = /datum/skills/smartgunner
@@ -262,8 +264,8 @@
 	name = "USCMCS Squad Hospital Corpsman"
 
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_MEDPREP, ACCESS_MARINE_MEDBAY)
-	assignment = JOB_SQUAD_MEDIC
-	rank = JOB_SQUAD_MEDIC
+	assignment = JOB_CRASH_SQUAD_MEDIC
+	rank = JOB_CRASH_SQUAD_MEDIC
 	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "HM"
 	skills = /datum/skills/combat_medic
@@ -295,8 +297,8 @@
 	name = "USCMCS Squad Squad Leader"
 
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_LEADER, ACCESS_MARINE_DROPSHIP)
-	assignment = JOB_SQUAD_LEADER
-	rank = JOB_SQUAD_LEADER
+	assignment = JOB_CRASH_SQUAD_LEADER
+	rank = JOB_CRASH_SQUAD_LEADER
 	paygrades = list(PAY_SHORT_ME5 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "SL"
 	skills = /datum/skills/SL
@@ -329,8 +331,8 @@
 	name = "USCMCS Squad Combat Technician"
 
 	access = list(ACCESS_MARINE_PREP, ACCESS_MARINE_ENGPREP, ACCESS_CIVILIAN_ENGINEERING)
-	assignment = JOB_SQUAD_ENGI
-	rank = JOB_SQUAD_ENGI
+	assignment = JOB_CRASH_SQUAD_ENGINEER
+	rank = JOB_CRASH_SQUAD_ENGINEER
 	paygrades = list(PAY_SHORT_ME3 = JOB_PLAYTIME_TIER_0)
 	role_comm_title = "ComTech"
 	skills = /datum/skills/combat_engineer
@@ -358,3 +360,96 @@
 	add_common_wo_equipment(new_human)
 
 //*****************************************************************************************************//
+
+/obj/structure/machinery/cm_vending/gear/commanding_officer/crash
+	vendor_role = list(JOB_CRASH_CO)
+
+/obj/structure/machinery/cm_vending/clothing/commanding_officer/crash
+	req_access = list(ACCESS_MARINE_SENIOR)
+	vendor_role = list(JOB_CRASH_CO)
+
+/obj/structure/machinery/cm_vending/gear/synth/crash
+	vendor_role = list(JOB_CRASH_SYNTH)
+
+/obj/structure/machinery/cm_vending/clothing/synth/crash
+	req_access = list(ACCESS_MARINE_SYNTH)
+	vendor_role = list(JOB_CRASH_SYNTH)
+
+/obj/structure/machinery/cm_vending/clothing/synth/snowflake/crash
+	req_access = list(ACCESS_MARINE_SYNTH)
+	vendor_role = list(JOB_CRASH_SYNTH)
+
+/obj/structure/machinery/cm_vending/own_points/experimental_tools/crash
+	vendor_role = list(JOB_CRASH_SYNTH)
+
+/obj/structure/machinery/cm_vending/clothing/marine/crash
+	squad_tag = SQUAD_MARINE_1
+	req_access = list(ACCESS_MARINE_PREP)
+	vendor_role = list(JOB_CRASH_SQUAD_MARINE)
+	headset_type = /obj/item/device/radio/headset/almayer/marine/alpha
+
+/obj/structure/machinery/cm_vending/gear/medic/crash
+	vendor_role = list(JOB_CRASH_SQUAD_MEDIC)
+	req_access = list(ACCESS_MARINE_MEDPREP)
+
+/obj/structure/machinery/cm_vending/clothing/medic/crash
+	squad_tag = SQUAD_MARINE_1
+	req_access = list(ACCESS_MARINE_MEDPREP)
+	vendor_role = list(JOB_CRASH_SQUAD_MEDIC)
+	headset_type = /obj/item/device/radio/headset/almayer/marine/alpha/med
+
+/obj/structure/machinery/cm_vending/gear/engi/crash
+	vendor_role = list(JOB_CRASH_SQUAD_ENGINEER)
+
+/obj/structure/machinery/cm_vending/clothing/engi/crash
+	squad_tag = SQUAD_MARINE_1
+	req_access = list(ACCESS_MARINE_ENGPREP)
+	vendor_role = list(JOB_CRASH_SQUAD_ENGINEER)
+	gloves_type = /obj/item/clothing/gloves/marine/insulated
+	headset_type = /obj/item/device/radio/headset/almayer/marine/alpha/engi
+
+/obj/structure/machinery/cm_vending/gear/smartgun/crash
+	vendor_role = list(JOB_CRASH_SQUAD_SMARTGUNNER)
+	req_access = list(ACCESS_MARINE_SMARTPREP)
+
+/obj/structure/machinery/cm_vending/clothing/smartgun/crash
+	squad_tag = SQUAD_MARINE_1
+	req_access = list(ACCESS_MARINE_SMARTPREP)
+	vendor_role = list(JOB_CRASH_SQUAD_SMARTGUNNER)
+	headset_type = /obj/item/device/radio/headset/almayer/marine/alpha
+
+/obj/structure/machinery/cm_vending/gear/spec/crash
+	vendor_role = list(JOB_CRASH_SQUAD_SPECIALIST)
+
+/obj/structure/machinery/cm_vending/clothing/specialist/crash
+	squad_tag = SQUAD_MARINE_1
+	vendor_role = list(JOB_CRASH_SQUAD_SPECIALIST)
+	req_access = list(ACCESS_MARINE_SPECPREP)
+	headset_type = /obj/item/device/radio/headset/almayer/marine/alpha
+
+/obj/structure/machinery/cm_vending/gear/leader/crash
+	vendor_role = list(JOB_CRASH_SQUAD_LEADER)
+	req_access = list(ACCESS_MARINE_LEADER)
+
+/obj/structure/machinery/cm_vending/clothing/leader/crash
+	squad_tag = SQUAD_MARINE_1
+	req_access = list(ACCESS_MARINE_LEADER)
+	vendor_role = list(JOB_CRASH_SQUAD_LEADER)
+	headset_type = /obj/item/device/radio/headset/almayer/marine/alpha/lead
+
+/obj/structure/machinery/cm_vending/clothing/senior_officer/crash
+	req_access = null
+	req_one_access = list(ACCESS_MARINE_CMO, ACCESS_MARINE_CE)
+	vendor_role = list(JOB_CRASH_CMO, JOB_CRASH_CHIEF_ENGINEER)
+
+/obj/structure/machinery/cm_vending/clothing/senior_officer/crash/get_listed_products(mob/user)
+	if(!user)
+		var/list/combined = list()
+		combined += GLOB.cm_vending_clothing_chief_engineer
+		combined += GLOB.cm_vending_clothing_cmo
+		return combined
+	else if(user.job == JOB_CRASH_CHIEF_ENGINEER)
+		return GLOB.cm_vending_clothing_chief_engineer
+	else if(user.job == JOB_CRASH_CMO)
+		return GLOB.cm_vending_clothing_cmo
+	return ..()

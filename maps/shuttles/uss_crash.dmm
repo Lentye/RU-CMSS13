@@ -32,7 +32,7 @@
 /area/shuttle/uss_crash)
 "ae" = (
 /obj/structure/machinery/recharge_station,
-/obj/effect/landmark/start/synthetic,
+/obj/effect/landmark/start/crash/synthetic,
 /turf/open/floor/almayer/plate,
 /area/shuttle/uss_crash)
 "af" = (
@@ -77,10 +77,6 @@
 /obj/item/bodybag/cryobag,
 /turf/open/floor/almayer/sterile_green,
 /area/shuttle/uss_crash)
-"aj" = (
-/obj/structure/machinery/cm_vending/clothing/synth,
-/turf/open/floor/almayer/plate,
-/area/shuttle/uss_crash)
 "ak" = (
 /turf/open/floor/almayer/uscm/directional,
 /area/shuttle/uss_crash)
@@ -115,14 +111,7 @@
 /turf/open/floor/almayer/plate,
 /area/shuttle/uss_crash)
 "aq" = (
-/obj/structure/machinery/iv_drip,
-/obj/item/reagent_container/blood/OMinus,
-/obj/item/reagent_container/blood/OMinus,
-/obj/item/reagent_container/blood/AMinus,
-/obj/item/reagent_container/blood/APlus,
-/obj/item/reagent_container/blood/BMinus,
-/obj/item/reagent_container/blood/BPlus,
-/obj/item/reagent_container/blood/OPlus,
+/obj/structure/machinery/cm_vending/sorted/medical/blood,
 /turf/open/floor/almayer/sterile_green,
 /area/shuttle/uss_crash)
 "ar" = (
@@ -155,7 +144,7 @@
 /turf/open/floor/almayer/plate,
 /area/shuttle/uss_crash)
 "au" = (
-/obj/structure/machinery/cm_vending/own_points/experimental_tools,
+/obj/structure/machinery/cm_vending/own_points/experimental_tools/crash,
 /turf/open/floor/almayer/plate,
 /area/shuttle/uss_crash)
 "av" = (
@@ -283,14 +272,6 @@
 /area/shuttle/uss_crash)
 "aP" = (
 /obj/structure/machinery/iv_drip,
-/obj/item/reagent_container/blood/OMinus,
-/obj/item/reagent_container/blood/OMinus,
-/obj/item/reagent_container/blood/AMinus,
-/obj/item/reagent_container/blood/AMinus,
-/obj/item/reagent_container/blood/APlus,
-/obj/item/reagent_container/blood/BMinus,
-/obj/item/reagent_container/blood/BPlus,
-/obj/item/reagent_container/blood/OPlus,
 /turf/open/floor/almayer/sterile_green,
 /area/shuttle/uss_crash)
 "aR" = (
@@ -303,11 +284,7 @@
 /turf/open/floor/almayer/plate,
 /area/shuttle/uss_crash)
 "aS" = (
-/obj/structure/machinery/cm_vending/clothing/smartgun/alpha{
-	req_access = null;
-	req_one_access = null;
-	squad_tag = null
-	},
+/obj/structure/machinery/cm_vending/clothing/smartgun/crash,
 /turf/open/floor/almayer/plate,
 /area/shuttle/uss_crash)
 "aT" = (
@@ -358,11 +335,7 @@
 /turf/open/floor/almayer/plate,
 /area/shuttle/uss_crash)
 "aY" = (
-/obj/structure/machinery/cm_vending/clothing/marine/alpha{
-	req_access = null;
-	req_one_access = null;
-	squad_tag = null
-	},
+/obj/structure/machinery/cm_vending/clothing/marine/crash,
 /turf/open/floor/almayer/plate,
 /area/shuttle/uss_crash)
 "aZ" = (
@@ -371,14 +344,11 @@
 	name = "General Listening Channel";
 	pixel_y = 28
 	},
-/obj/structure/machinery/cm_vending/gear/smartgun{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/structure/machinery/cm_vending/gear/smartgun/crash,
 /turf/open/floor/almayer/plate,
 /area/shuttle/uss_crash)
 "ba" = (
-/obj/structure/machinery/cm_vending/clothing/commanding_officer,
+/obj/structure/machinery/cm_vending/clothing/commanding_officer/crash,
 /turf/open/floor/almayer/plate,
 /area/shuttle/uss_crash)
 "bb" = (
@@ -427,14 +397,6 @@
 	},
 /turf/open/floor/almayer/plate,
 /area/shuttle/uss_crash)
-"bi" = (
-/obj/structure/machinery/cm_vending/clothing/tl/alpha{
-	req_access = null;
-	req_one_access = null;
-	squad_tag = null
-	},
-/turf/open/floor/almayer/plate,
-/area/shuttle/uss_crash)
 "bj" = (
 /obj/structure/machinery/cm_vending/sorted/attachments/squad{
 	req_access = null;
@@ -470,10 +432,7 @@
 	name = "General Listening Channel";
 	pixel_y = 28
 	},
-/obj/structure/machinery/cm_vending/gear/tl{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/structure/machinery/cm_vending/clothing/senior_officer/crash,
 /turf/open/floor/almayer/plate,
 /area/shuttle/uss_crash)
 "bp" = (
@@ -516,11 +475,7 @@
 /turf/open/floor/almayer/plate,
 /area/shuttle/uss_crash)
 "bv" = (
-/obj/structure/machinery/cm_vending/clothing/leader/alpha{
-	req_access = null;
-	req_one_access = null;
-	squad_tag = null
-	},
+/obj/structure/machinery/cm_vending/clothing/leader/crash,
 /turf/open/floor/almayer/plate,
 /area/shuttle/uss_crash)
 "bw" = (
@@ -532,7 +487,7 @@
 /obj/structure/bed/chair/dropship/pilot{
 	dir = 4
 	},
-/obj/effect/landmark/start/captain,
+/obj/effect/landmark/start/crash/captain,
 /turf/open/floor/almayer/uscm/directional/logo_c/west,
 /area/shuttle/uss_crash)
 "by" = (
@@ -574,11 +529,11 @@
 	name = "General Listening Channel";
 	pixel_y = 28
 	},
-/obj/structure/machinery/cm_vending/gear/synth,
+/obj/structure/machinery/cm_vending/gear/synth/crash,
 /turf/open/floor/almayer/plate,
 /area/shuttle/uss_crash)
 "bB" = (
-/obj/effect/landmark/start/marine,
+/obj/effect/landmark/start/crash/marine,
 /turf/open/floor/almayer,
 /area/shuttle/uss_crash)
 "bC" = (
@@ -599,7 +554,7 @@
 /obj/structure/machinery/keycard_auth{
 	pixel_x = -23
 	},
-/obj/structure/machinery/cm_vending/clothing/synth/snowflake,
+/obj/structure/machinery/cm_vending/clothing/synth/snowflake/crash,
 /turf/open/floor/almayer/uscm/directional/northwest,
 /area/shuttle/uss_crash)
 "bE" = (
@@ -647,33 +602,19 @@
 /turf/open/floor/almayer/plate,
 /area/shuttle/uss_crash)
 "bJ" = (
-/obj/structure/machinery/cm_vending/clothing/engi/alpha{
-	req_access = null;
-	req_one_access = null;
-	squad_tag = null
-	},
+/obj/structure/machinery/cm_vending/clothing/engi/crash,
 /turf/open/floor/almayer/plate,
 /area/shuttle/uss_crash)
 "bK" = (
-/obj/structure/machinery/cm_vending/gear/leader{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/structure/machinery/cm_vending/gear/leader/crash,
 /turf/open/floor/almayer/plate,
 /area/shuttle/uss_crash)
 "bL" = (
-/obj/structure/machinery/cm_vending/gear/engi{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/structure/machinery/cm_vending/gear/engi/crash,
 /turf/open/floor/almayer/plate,
 /area/shuttle/uss_crash)
 "bM" = (
-/obj/structure/machinery/cm_vending/clothing/specialist/alpha{
-	req_access = null;
-	req_one_access = null;
-	squad_tag = null
-	},
+/obj/structure/machinery/cm_vending/clothing/specialist/crash,
 /turf/open/floor/almayer/plate,
 /area/shuttle/uss_crash)
 "bN" = (
@@ -685,18 +626,11 @@
 /area/shuttle/uss_crash)
 "bO" = (
 /obj/structure/machinery/light,
-/obj/structure/machinery/cm_vending/clothing/medic/alpha{
-	req_access = null;
-	req_one_access = null;
-	squad_tag = null
-	},
+/obj/structure/machinery/cm_vending/clothing/medic/crash,
 /turf/open/floor/almayer/plate,
 /area/shuttle/uss_crash)
 "bP" = (
-/obj/structure/machinery/cm_vending/gear/spec{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/structure/machinery/cm_vending/gear/spec/crash,
 /turf/open/floor/almayer/plate,
 /area/shuttle/uss_crash)
 "bQ" = (
@@ -705,10 +639,7 @@
 	},
 /area/shuttle/uss_crash)
 "bR" = (
-/obj/structure/machinery/cm_vending/gear/medic{
-	req_access = null;
-	req_one_access = null
-	},
+/obj/structure/machinery/cm_vending/gear/medic/crash,
 /turf/open/floor/almayer/plate,
 /area/shuttle/uss_crash)
 "bS" = (
@@ -766,11 +697,11 @@
 "bW" = (
 /obj/effect/landmark/late_join,
 /obj/effect/landmark/ert_spawns/distress_cryo,
-/obj/effect/landmark/start/marine/smartgunner,
+/obj/effect/landmark/start/crash/marine/smartgunner,
 /turf/open/floor/almayer/plate,
 /area/shuttle/uss_crash)
 "bX" = (
-/obj/effect/landmark/start/marine,
+/obj/effect/landmark/start/crash/marine,
 /turf/open/floor/plating/plating_catwalk,
 /area/shuttle/uss_crash)
 "bY" = (
@@ -807,7 +738,7 @@
 /obj/structure/machinery/light{
 	dir = 8
 	},
-/obj/structure/machinery/cm_vending/gear/commanding_officer,
+/obj/structure/machinery/cm_vending/gear/commanding_officer/crash,
 /turf/open/floor/almayer/plate,
 /area/shuttle/uss_crash)
 "cf" = (
@@ -891,7 +822,10 @@
 	name = "\improper Ship Control Room";
 	no_panel = 1;
 	unacidable = 1;
-	unslashable = 1
+	unslashable = 1;
+	req_access = null;
+	req_one_access = list(5, 6, 31, 36);
+	damage_cap = 2400
 	},
 /turf/open/floor/almayer,
 /area/shuttle/uss_crash)
@@ -983,7 +917,7 @@
 /area/shuttle/uss_crash)
 "cE" = (
 /obj/structure/bed/chair/dropship/pilot,
-/obj/effect/landmark/start/engineering,
+/obj/effect/landmark/start/crash/engineering,
 /turf/open/floor/almayer,
 /area/shuttle/uss_crash)
 "cF" = (
@@ -1192,7 +1126,7 @@
 /turf/open/floor/almayer/plate,
 /area/shuttle/uss_crash)
 "hW" = (
-/obj/effect/landmark/start/marine/engineer,
+/obj/effect/landmark/start/crash/marine/engineer,
 /turf/open/floor/almayer/plate,
 /area/shuttle/uss_crash)
 "re" = (
@@ -1200,45 +1134,53 @@
 /turf/open/floor/almayer/sterile_green,
 /area/shuttle/uss_crash)
 "sR" = (
-/obj/effect/landmark/start/marine/engineer,
+/obj/effect/landmark/start/crash/marine/engineer,
 /turf/open/floor/plating/plating_catwalk,
 /area/shuttle/uss_crash)
 "uY" = (
-/obj/effect/landmark/start/marine/medic,
+/obj/effect/landmark/start/crash/marine/medic,
 /turf/open/floor/almayer/plate,
 /area/shuttle/uss_crash)
+"wm" = (
+/obj/structure/machinery/iv_drip,
+/turf/open/floor/almayer/dark_sterile,
+/area/shuttle/uss_crash)
 "zB" = (
-/obj/effect/landmark/start/marine/leader,
+/obj/effect/landmark/start/crash/marine/leader,
 /turf/open/floor/plating/plating_catwalk,
 /area/shuttle/uss_crash)
 "zC" = (
 /turf/template_noop,
 /area/space)
 "BN" = (
-/obj/effect/landmark/start/marine/medic,
+/obj/effect/landmark/start/crash/marine/medic,
 /turf/open/floor/plating/plating_catwalk,
 /area/shuttle/uss_crash)
 "Ci" = (
-/obj/effect/landmark/start/marine/medic,
+/obj/effect/landmark/start/crash/marine/medic,
 /turf/open/floor/almayer,
 /area/shuttle/uss_crash)
 "FP" = (
 /obj/effect/landmark/late_join,
 /obj/effect/landmark/ert_spawns/distress_cryo,
-/obj/effect/landmark/start/marine/spec,
+/obj/effect/landmark/start/crash/marine/spec,
 /turf/open/floor/almayer/plate,
 /area/shuttle/uss_crash)
 "Jq" = (
 /obj/effect/landmark/late_join,
 /obj/effect/landmark/ert_spawns/distress_cryo,
-/obj/effect/landmark/start/marine,
+/obj/effect/landmark/start/crash/marine,
 /turf/open/floor/almayer,
+/area/shuttle/uss_crash)
+"Ri" = (
+/obj/structure/machinery/cm_vending/clothing/synth/crash,
+/turf/open/floor/almayer/plate,
 /area/shuttle/uss_crash)
 "Ym" = (
 /obj/structure/bed/chair/vehicle{
 	dir = 4
 	},
-/obj/effect/landmark/start/professor,
+/obj/effect/landmark/start/crash/professor,
 /turf/open/floor/almayer/sterile_green,
 /area/shuttle/uss_crash)
 
@@ -1413,7 +1355,7 @@ cf
 (9,1,1) = {"
 ca
 aG
-dH
+wm
 dH
 dH
 aP
@@ -1551,7 +1493,7 @@ dR
 el
 ca
 bo
-bi
+aL
 bL
 bJ
 bR
@@ -1754,7 +1696,7 @@ zC
 zC
 ca
 bA
-aj
+Ri
 bD
 am
 bp

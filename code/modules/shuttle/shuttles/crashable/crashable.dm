@@ -98,7 +98,7 @@
 /// Checks for anything that may get in the way of a crash, returns FALSE if there is something in the way or is out of bounds
 /obj/docking_port/mobile/proc/check_crash_point(obj/docking_port/stationary/crashable/checked_crashable_port)
 //RUCM START
-	if(length(return_turfs()) != length(checked_crashable_port.return_turfs()))
+	if(length(checked_crashable_port.return_turfs()) != length(checked_crashable_port.return_turfs()))
 		return FALSE
 //RUCM END
 

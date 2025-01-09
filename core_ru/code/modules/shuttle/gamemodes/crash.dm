@@ -25,12 +25,22 @@
 		SSticker.mode.flags_round_type |= MODE_DS_LANDED
 
 	var/datum/cause_data/cause_data = create_cause_data("посадки USS Crash")
-	INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(cell_explosion), front, 600, 40, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, cause_data)
-	INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(cell_explosion), rear, 600, 40, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, cause_data)
-	INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(cell_explosion), left, 600, 40, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, cause_data)
-	INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(cell_explosion), right, 600, 40, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, cause_data)
+	INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(cell_explosion), front, 150, 25, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, cause_data)
+	INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(cell_explosion), rear, 150, 25, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, cause_data)
+	INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(cell_explosion), left, 150, 25, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, cause_data)
+	INVOKE_ASYNC(GLOBAL_PROC, GLOBAL_PROC_REF(cell_explosion), right, 150, 25, EXPLOSION_FALLOFF_SHAPE_LINEAR, null, cause_data)
 
 	sleep(4 SECONDS)
+
+/obj/docking_port/stationary/crashmode/Initialize()
+	..()
+	var/datum/game_mode/crash/gamemode = SSticker.mode
+	gamemode.crash_points += src
+
+/obj/docking_port/stationary/crashmode/Destroy()
+	var/datum/game_mode/crash/gamemode = SSticker.mode
+	gamemode.crash_points -= src
+	return ..()
 
 // -- Shuttles
 

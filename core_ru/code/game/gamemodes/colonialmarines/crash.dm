@@ -10,16 +10,16 @@
 	xeno_required_num = 1
 	flags_round_type = MODE_NEW_SPAWN|MODE_NO_SHIP_MAP|MODE_INFESTATION
 	role_mappings = list(
-		/datum/job/command/commander/crash = JOB_CO,
-		/datum/job/civilian/synthetic/crash = JOB_SYNTH,
-		/datum/job/logistics/engineering/crash = JOB_CHIEF_ENGINEER,
-		/datum/job/civilian/professor/crash = JOB_CMO,
-		/datum/job/marine/leader/crash = JOB_SQUAD_LEADER,
-		/datum/job/marine/specialist/crash = JOB_SQUAD_SPECIALIST,
-		/datum/job/marine/smartgunner/crash = JOB_SQUAD_SMARTGUN,
-		/datum/job/marine/medic/crash = JOB_SQUAD_MEDIC,
-		/datum/job/marine/engineer/crash = JOB_SQUAD_ENGI,
-		/datum/job/marine/standard/crash = JOB_SQUAD_MARINE
+		/datum/job/command/commander/crash = JOB_CRASH_CO,
+		/datum/job/civilian/synthetic/crash = JOB_CRASH_SYNTH,
+		/datum/job/logistics/engineering/crash = JOB_CRASH_CHIEF_ENGINEER,
+		/datum/job/civilian/professor/crash = JOB_CRASH_CMO,
+		/datum/job/marine/leader/crash = JOB_CRASH_SQUAD_LEADER,
+		/datum/job/marine/specialist/crash = JOB_CRASH_SQUAD_SPECIALIST,
+		/datum/job/marine/smartgunner/crash = JOB_CRASH_SQUAD_SMARTGUNNER,
+		/datum/job/marine/medic/crash = JOB_CRASH_SQUAD_MEDIC,
+		/datum/job/marine/engineer/crash = JOB_CRASH_SQUAD_ENGINEER,
+		/datum/job/marine/standard/crash = JOB_CRASH_SQUAD_MARINE
 	)
 
 	population_min = 0
@@ -32,6 +32,7 @@
 	// Shuttle details
 	var/shuttle_id = DROPSHIP_CRASH
 	var/obj/docking_port/mobile/crashmode/shuttle
+	var/list/crash_points =  list()
 
 ////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////
@@ -140,7 +141,7 @@
 
 	// Shuttle crash point creating
 	var/obj/docking_port/stationary/crashmode/temp_crashable_port
-	for(var/i = 1 to 20)
+/* for(var/i = 1 to 20)
 		var/list/all_ground_levels = SSmapping.levels_by_trait(ZTRAIT_GROUND)
 		var/ground_z_level = all_ground_levels[1]
 
@@ -159,11 +160,12 @@
 		var/turf/turf_picked = pick(potential_turfs)
 
 		temp_crashable_port = new(turf_picked)
+*/
+	var/datum/game_mode/crash/gamemode = SSticker.mode
+	temp_crashable_port = pick((gamemode.crash_points))
 
-		if(!shuttle.check_crash_point(temp_crashable_port))
-			qdel(temp_crashable_port)
-			continue
-		break
+//	if(!shuttle.check_crash_point(temp_crashable_port))
+//		qdel(temp_crashable_port)
 
 	shuttle.crashing = TRUE
 	SSshuttle.moveShuttleToDock(shuttle, temp_crashable_port, TRUE)

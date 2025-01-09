@@ -18,6 +18,10 @@
 /obj/structure/machinery/computer/nuke_disk_generator/red,
 /turf/template_noop,
 /area/template_noop)
+"yB" = (
+/obj/docking_port/stationary/crashmode,
+/turf/template_noop,
+/area/template_noop)
 "YY" = (
 /obj/effect/landmark/crash/nuclear_spawn,
 /turf/template_noop,
@@ -8104,7 +8108,7 @@ aE
 aE
 aE
 aE
-aE
+yB
 aE
 aE
 aE
@@ -10987,7 +10991,7 @@ aE
 aE
 aE
 aE
-aE
+yB
 aE
 aE
 aE
@@ -24464,7 +24468,7 @@ aE
 aE
 aE
 aE
-aE
+yB
 aE
 aE
 aE
@@ -26558,7 +26562,7 @@ aE
 aE
 aE
 aE
-aE
+yB
 aE
 aE
 aE
