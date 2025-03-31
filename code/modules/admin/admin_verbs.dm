@@ -176,6 +176,9 @@ GLOBAL_LIST_INIT(admin_verbs_server, list(
 	/client/proc/cmd_debug_del_all,
 	/datum/admins/proc/togglejoin,
 	/client/proc/toggle_cdn,
+	//RUCM EDIT START
+	/datum/admins/proc/end_round_ru,
+	//RUCM EDIT ENDS
 ))
 
 GLOBAL_LIST_INIT(admin_verbs_debug, list(
