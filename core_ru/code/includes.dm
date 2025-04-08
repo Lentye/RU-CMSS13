@@ -33,6 +33,7 @@
 #include "game\area\KhamiBarrens.dm"
 #include "game\area\RU_Almayer.dm"
 #include "game\area\shuttles.dm"
+#include "game\area\UPPS_BURYA.dm"
 #include "game\gamemodes\game_mode.dm"
 #include "game\gamemodes\colonialmarines\colonialmarines.dm"
 #include "game\gamemodes\colonialmarines\crash\equipping.dm"
