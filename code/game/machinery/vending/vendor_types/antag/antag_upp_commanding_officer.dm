@@ -46,7 +46,7 @@ GLOBAL_LIST_INIT(cm_vending_gear_upp_commanding_officer, list(
 	name = "\improper UnionAraratCorp Commanding Officer Weapon Rack"
 	desc = "An automated weapons rack for the Commanding Officer. It features a robust selection of weaponry meant only for the UPP's top officers."
 	req_access = list(ACCESS_UPP_LEADERSHIP)
-	vendor_role = list(JOB_UPP_MAY_OFFICER, JOB_UPP_LTKOL_OFFICER, JOB_UPP_KOL_OFFICER)
+	vendor_role = list(JOB_UPP_CO_OFFICER, JOB_UPP_MAY_OFFICER, JOB_UPP_LTKOL_OFFICER, JOB_UPP_KOL_OFFICER)
 	icon_state = "guns"
 	use_snowflake_points = TRUE
 	vendor_theme = VENDOR_THEME_UPP
@@ -59,7 +59,7 @@ GLOBAL_LIST_INIT(cm_vending_gear_upp_commanding_officer, list(
 GLOBAL_LIST_INIT(cm_vending_clothing_upp_commanding_officer, list(
 		list("STANDARD EQUIPMENT (TAKE ALL)", 0, null, null, null),
 		list("Headset", 0, /obj/item/device/radio/headset/distress/UPP/command, MARINE_CAN_BUY_EAR, VENDOR_ITEM_MANDATORY),
-		list("MRE", 0, /obj/item/storage/box/MRE, MARINE_CAN_BUY_MRE, VENDOR_ITEM_MANDATORY),
+		list("IRP", 0, /obj/item/storage/box/mre/upp, MARINE_CAN_BUY_MRE, VENDOR_ITEM_MANDATORY),
 
 		list("COMMANDING OFFICER ESSENTIALS KIT (TAKE ALL)", 0, null, null, null),
 		list("Commanding Officer Essentials Kit", 0, /obj/effect/essentials_set/upp_commanding_officer, MARINE_CAN_BUY_ESSENTIALS, VENDOR_ITEM_MANDATORY),
@@ -112,7 +112,7 @@ GLOBAL_LIST_INIT(cm_vending_clothing_upp_commanding_officer, list(
 	name = "\improper UnionAraratCorp Commanding Officer Equipment Rack"
 	desc = "An automated equipment vendor for the Commanding Officer. Contains a prime selection of equipment for only the UPP's top officers."
 	req_access = list(ACCESS_UPP_LEADERSHIP)
-	vendor_role = list(JOB_UPP_MAY_OFFICER, JOB_UPP_LTKOL_OFFICER, JOB_UPP_KOL_OFFICER)
+	vendor_role = list(JOB_UPP_CO_OFFICER, JOB_UPP_MAY_OFFICER, JOB_UPP_LTKOL_OFFICER, JOB_UPP_KOL_OFFICER)
 	vendor_theme = VENDOR_THEME_UPP
 
 /obj/structure/machinery/cm_vending/clothing/upp_commanding_officer/get_listed_products(mob/user)

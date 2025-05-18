@@ -52,6 +52,10 @@ Buildable meters
 	var/connect_types[] = list(1) //1=regular, 2=supply, 3=scrubber
 	force = 7
 	icon = 'icons/obj/pipes/pipe_item.dmi'
+	item_icons = list(
+		WEAR_L_HAND = 'icons/mob/humans/onmob/inhands/equipment/construction_lefthand.dmi',
+		WEAR_R_HAND = 'icons/mob/humans/onmob/inhands/equipment/construction_righthand.dmi',
+	)
 	icon_state = "simple"
 	item_state = "buildpipe"
 	flags_atom = FPRINT|CONDUCT
@@ -265,7 +269,8 @@ Buildable meters
 
 //called when a turf is attacked with a pipe item
 /obj/item/pipe/afterattack(turf/open/floor/target, mob/user, proximity)
-	if(!proximity) return
+	if(!proximity)
+		return
 	if(istype(target))
 		user.drop_inv_item_to_loc(src, target)
 	else
@@ -575,9 +580,9 @@ Buildable meters
 	new_pipe.search_for_connections()
 
 	playsound(loc, 'sound/items/Ratchet.ogg', 25, 1)
-	user.visible_message( \
-		"[user] fastens [src].", \
-		SPAN_NOTICE("You have fastened [src]."), \
+	user.visible_message(
+		"[user] fastens [src].",
+		SPAN_NOTICE("You have fastened [src]."),
 		"You hear ratchet.")
 	qdel(src) // remove the pipe item
 

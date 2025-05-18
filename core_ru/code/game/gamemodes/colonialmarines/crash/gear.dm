@@ -40,7 +40,7 @@
 	utility_hat = list(/obj/item/clothing/head/cmcap,/obj/item/clothing/head/beret/cm/tan)
 	utility_extra = list(/obj/item/clothing/glasses/sunglasses,/obj/item/clothing/glasses/sunglasses/big,/obj/item/clothing/glasses/sunglasses/aviator,/obj/item/clothing/glasses/mbcg)
 
-	service_under = list(/obj/item/clothing/under/marine/officer/formal/white, /obj/item/clothing/under/marine/officer/formal/black)
+	service_under = list(/obj/item/clothing/under/marine/officer/formal/gray, /obj/item/clothing/under/marine/officer/formal/turtleneck)
 	service_shoes = list(/obj/item/clothing/shoes/dress/commander)
 	service_extra = list(/obj/item/clothing/suit/storage/jacket/marine/dress/officer/bomber)
 	service_hat = list(/obj/item/clothing/head/beret/cm, /obj/item/clothing/head/beret/marine/commander/dress, /obj/item/clothing/head/beret/marine/commander/black)
@@ -76,8 +76,6 @@
 				sidearmpath = /obj/item/storage/belt/gun/m4a3/heavy/co_golden
 			if("M4A3 Custom")
 				sidearmpath = /obj/item/storage/belt/gun/m4a3/commander
-			if("VP78")
-				sidearmpath = /obj/item/storage/belt/gun/m4a3/vp78
 
 	//back
 	new_human.equip_to_slot_or_del(new backItem(new_human), WEAR_BACK)
@@ -94,7 +92,7 @@
 	//waist
 	new_human.equip_to_slot_or_del(new sidearmpath(new_human), WEAR_WAIST)
 	//limbs
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/techofficer/commander(new_human), WEAR_HANDS)
+	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/insulated/black(new_human), WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/dress/commander(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range/designator(new_human), WEAR_L_HAND)
 	//pockets
@@ -223,7 +221,6 @@
 	new_human.equip_to_slot_or_del(new /obj/item/attachable/magnetic_harness(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/spec_kit, WEAR_R_HAND)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine(new_human), WEAR_HEAD)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/pouch/magazine/large/pmc_m39(new_human), WEAR_L_STORE)
 
 	add_common_wo_equipment(new_human)
 
