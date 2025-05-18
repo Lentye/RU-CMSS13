@@ -1391,6 +1391,8 @@ obj/item/device/motiondetector/hacked/clf_ru
 		if(FACTION_CLF)
 			faction_group = FACTION_LIST_CLF
 
+/obj/item
+
 /*
 /obj/item/clothing/head/helmet/marine/veteran/UPP
 
