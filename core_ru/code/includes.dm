@@ -21,6 +21,7 @@
 #include "datums\entities\discord_link.dm"
 #include "datums\ammo\bullet\smg.dm"
 #include "datums\ammo\bullet\special_ammo.dm"
+#include "datums\emergency_calls\clf_nightmare.dm"
 #include "datums\entities\donaters.dm"
 #include "datums\entities\player.dm"
 #include "datums\redis\callbacks\ooc.dm"

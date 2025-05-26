@@ -9,11 +9,11 @@
 	minimap_background = "background_clf"
 	idtype = /obj/item/card/id/data
 
-/datum/equipment_preset/clf/New()
+/datum/equipment_preset/clf/nightmare/New()
 	. = ..()
 	access = get_access(ACCESS_LIST_CLF_BASE)
 
-/datum/equipment_preset/clf/load_name(mob/living/carbon/human/new_human, randomise)
+/datum/equipment_preset/clf/nightmare/load_name(mob/living/carbon/human/new_human, randomise)
 	new_human.gender = pick(60;MALE, 40;FEMALE)
 	var/random_name
 	var/first_name
@@ -96,10 +96,9 @@
 
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF(new_human), WEAR_L_EAR)
 
-	new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/gunoil, WEAR_IN_HELMET)
+	new_human.equip_to_slot_or_del(new /obj/item/stack/repairable/gunlube, WEAR_IN_HELMET)
 	new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/raincover, WEAR_IN_HELMET)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(new_human), WEAR_IN_HELMET)
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/tricord(new_human), WEAR_IN_HELMET)
 	var/obj/item/facepaint/skull/paint = new(new_human)
 	paint.paint_face(new_human, new_human)
 	qdel(paint, TRUE)
@@ -225,10 +224,9 @@
 
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF/cct(new_human), WEAR_L_EAR)
 
-	new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/gunoil, WEAR_IN_HELMET)
+	new_human.equip_to_slot_or_del(new /obj/item/stack/repairable/gunlube, WEAR_IN_HELMET)
 	new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/raincover, WEAR_IN_HELMET)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(new_human), WEAR_IN_HELMET)
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/tricord(new_human), WEAR_IN_HELMET)
 	var/obj/item/facepaint/skull/paint = new(new_human)
 	paint.paint_face(new_human, new_human)
 	qdel(paint, TRUE)
@@ -365,17 +363,16 @@
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/adv(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/structure/bed/portable_surgery(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/box/packet/smoke, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night(new_human), WEAR_EYES)
 
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF/medic(new_human), WEAR_L_EAR)
 
-	new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/gunoil, WEAR_IN_HELMET)
+	new_human.equip_to_slot_or_del(new /obj/item/stack/repairable/gunlube, WEAR_IN_HELMET)
 	new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/raincover, WEAR_IN_HELMET)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(new_human), WEAR_IN_HELMET)
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/tricord(new_human), WEAR_IN_HELMET)
 	var/obj/item/facepaint/skull/paint = new(new_human)
 	paint.paint_face(new_human, new_human)
 	qdel(paint, TRUE)
@@ -518,7 +515,6 @@
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/accessory/health/ceramic_plate, WEAR_ACCESSORY)
 	var/obj/item/clothing/suit/storage/militia/suit = new(new_human)
 	new_human.equip_to_slot_or_del(suit, WEAR_JACKET)
-	new_human.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/marine/clf_ru(new_human), WEAR_HEAD)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/shoes/veteran/pmc/knife(new_human), WEAR_FEET)
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/gloves/marine/veteran(new_human), WEAR_HANDS)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crowbar(new_human), WEAR_IN_JACKET)
@@ -539,7 +535,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/attachable/bayonet/upp(new_human), WEAR_FACE)
 	for(var/i in 1 to 2)
 		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rocket/ap(new_human), WEAR_IN_ACCESSORY)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE(new_human), WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre(new_human), WEAR_IN_ACCESSORY)
 	for(var/i in 1 to 2)
 		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rocket/wp(new_human), WEAR_IN_L_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/rocket/ap(new_human), WEAR_IN_BACK)
@@ -554,17 +550,15 @@
 
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF/cct(new_human), WEAR_L_EAR)
 	var/obj/item/device/helmet_visor/medical/HUD = new()
-	var/obj/item/clothing/head/helmet/marine/helmet = (new_human.head)
+	var/obj/item/clothing/head/helmet/marine/M3T/clf_ru/helmet = new
+	new_human.equip_to_slot_or_del(helmet, WEAR_HEAD)
 	helmet.attackby(HUD, new_human)
 	helmet.active_visor = HUD
 	HUD.toggle_visor(helmet, new_human, silent = TRUE)
 
-	new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/gunoil, WEAR_IN_HELMET)
+	new_human.equip_to_slot_or_del(new /obj/item/stack/repairable/gunlube, WEAR_IN_HELMET)
 	new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/raincover, WEAR_IN_HELMET)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(new_human), WEAR_IN_HELMET)
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/tricord(new_human), WEAR_IN_HELMET)
-	jumpsuit.armor_melee = CLOTHING_ARMOR_LOW
-	jumpsuit.armor_bullet = CLOTHING_ARMOR_LOW
 	var/obj/item/facepaint/skull/paint = new(new_human)
 	paint.paint_face(new_human, new_human)
 	qdel(paint, TRUE)
@@ -702,10 +696,9 @@
 
 	new_human.equip_to_slot_or_del(new /obj/item/device/radio/headset/distress/CLF/command(new_human), WEAR_L_EAR)
 
-	new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/gunoil, WEAR_IN_HELMET)
+	new_human.equip_to_slot_or_del(new /obj/item/stack/repairable/gunlube, WEAR_IN_HELMET)
 	new_human.equip_to_slot_or_del(new /obj/item/prop/helmetgarb/raincover, WEAR_IN_HELMET)
 	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/oxycodone(new_human), WEAR_IN_HELMET)
-	new_human.equip_to_slot_or_del(new /obj/item/reagent_container/hypospray/autoinjector/tricord(new_human), WEAR_IN_HELMET)
 	var/obj/item/facepaint/skull/paint = new(new_human)
 	paint.paint_face(new_human, new_human)
 	qdel(paint, TRUE)
@@ -1129,8 +1122,8 @@
 	new_human.equip_to_slot_or_del(new /obj/item/smartgun_battery(new_human), WEAR_IN_J_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/smartgun_battery(new_human), WEAR_IN_J_STORE)
 	new_human.equip_to_slot_or_del(new /obj/item/device/whistle(new_human), WEAR_FACE)
-	for(var/i in 1 to 2)
-		new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smartgun(new_human), WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/smartgun(new_human), WEAR_IN_ACCESSORY)
+	new_human.equip_to_slot_or_del(new /obj/item/device/cotablet/clf(new_human), WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/tool/crew_monitor/clf_ru(new_human), WEAR_IN_ACCESSORY)
 	new_human.equip_to_slot_or_del(new /obj/item/weapon/gun/revolver/mateba/clf_ru(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/ammo_magazine/revolver/mateba/highimpact(new_human), WEAR_IN_BACK)
@@ -1139,7 +1132,7 @@
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/explosive/plastic(new_human), WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/device/binoculars/range/designator, WEAR_IN_BACK)
-	new_human.equip_to_slot_or_del(new /obj/item/storage/box/MRE, WEAR_IN_BACK)
+	new_human.equip_to_slot_or_del(new /obj/item/storage/box/mre, WEAR_IN_BACK)
 	new_human.equip_to_slot_or_del(new /obj/item/storage/firstaid/adv(new_human), WEAR_IN_BACK)
 
 	new_human.equip_to_slot_or_del(new /obj/item/clothing/glasses/night(new_human), WEAR_EYES)
@@ -1269,7 +1262,7 @@
 /obj/item/tool/crew_monitor/clf_ru
 	faction = FACTION_CLF
 
-obj/item/device/motiondetector/hacked/clf_ru
+/obj/item/device/motiondetector/hacked/clf_ru
 	iff_signal = "CLF"
 	desc = "A device that usually picks up non-USCM signals, but this one's been hacked to detect all non-CLF movement instead. Fight fire with fire!"
 
@@ -1279,7 +1272,65 @@ obj/item/device/motiondetector/hacked/clf_ru
 	armor_melee = CLOTHING_ARMOR_LOW
 	armor_bullet = CLOTHING_ARMOR_LOW
 
-/obj/item/clothing/suit/storage/militia
+/obj/item/clothing/suit/storage/militia/reinforced_clf_ru
+	name = "Reinforced colonial militia hauberk"
+	desc = "The hauberk of a colonist militia member, created from by combining modern armored plates. While not the most powerful form of armor, and primitive compared to most modern suits of armor, it gives notably look of armor's pieces abomination."
+	icon = 'icons/obj/items/clothing/suits/suits_by_faction/CLF.dmi'
+	icon_state = "rebel_armor"
+	item_icons = list(
+		WEAR_JACKET = 'icons/mob/humans/onmob/clothing/suits/suits_by_faction/CLF.dmi'
+	)
+	sprite_sheets = list(SPECIES_MONKEY = 'icons/mob/humans/species/monkeys/onmob/suit_monkey_1.dmi')
+	slowdown = SLOWDOWN_ARMOR_MEDIUM
+	flags_armor_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS|BODY_FLAG_ARMS
+	movement_compensation = SLOWDOWN_ARMOR_LOWHEAVY
+	armor_melee = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bullet = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_laser = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_energy = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bomb = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_bio = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_rad = CLOTHING_ARMOR_MEDIUMHIGH
+	armor_internaldamage = CLOTHING_ARMOR_MEDIUMHIGH
+	storage_slots = 3
+	uniform_restricted = list(/obj/item/clothing/under/colonist)
+	allowed = list(
+		/obj/item/weapon/gun,
+		/obj/item/tank/emergency_oxygen,
+		/obj/item/device/flashlight,
+		/obj/item/ammo_magazine,
+		/obj/item/explosive/grenade,
+		/obj/item/device/binoculars,
+		/obj/item/attachable/bayonet,
+		/obj/item/storage/backpack/general_belt,
+		/obj/item/storage/large_holster/machete,
+		/obj/item/weapon/baseballbat,
+		/obj/item/weapon/baseballbat/metal,
+		/obj/item/device/motiondetector,
+		/obj/item/device/walkman,
+	)
+	flags_cold_protection = BODY_FLAG_CHEST|BODY_FLAG_GROIN|BODY_FLAG_LEGS|BODY_FLAG_FEET|BODY_FLAG_ARMS|BODY_FLAG_HANDS
+	min_cold_protection_temperature = ICE_PLANET_MIN_COLD_PROT
+	valid_accessory_slots = list(ACCESSORY_SLOT_MEDAL)
+
+/obj/item/clothing/suit/storage/militia/reinforced_clf_ru/Initialize()
+	. = ..()
+	pockets.max_w_class = SIZE_SMALL //Can contain small items AND rifle magazines.
+	pockets.bypass_w_limit = list(
+		/obj/item/ammo_magazine/rifle,
+		/obj/item/ammo_magazine/smg,
+		/obj/item/ammo_magazine/sniper,
+	)
+	pockets.max_storage_space = 10
+
+
+/obj/item/clothing/head/helmet/marine/M3T/clf_ru
+	desc = "A Stolen custom-built helmet for explosive weaponry users. Comes with inbuilt ear blast protection, firing a rocket launcher without this is not recommended. Camera was removed"
+	built_in_visors = list(new /obj/item/device/helmet_visor/medical)
+
+/obj/item/clothing/head/helmet/marine/M3T/clf_ru/Initialize()
+	..()
+	qdel(camera)
 
 /obj/item/clothing/head/helmet/marine/clf_ru
 	name = "\improper Stolen M10 pattern marine helmet"
@@ -1341,6 +1392,7 @@ obj/item/device/motiondetector/hacked/clf_ru
 	desc = "A deployable, fully-automated turret with AI targeting capabilities used by the UPP. This one got CLF emblem on it instead"
 	disassemble_time = 4 SECONDS
 	handheld_type = /obj/item/defenses/handheld/sentry/upp/clf_ru
+	omni_directional = TRUE
 	selected_categories = list(
 		SENTRY_CATEGORY_IFF = FACTION_CLF,
 	)
@@ -1356,6 +1408,12 @@ obj/item/device/motiondetector/hacked/clf_ru
 
 /obj/item/weapon/gun/smartgun/clf/clf_ru/retrieval_check(mob/living/carbon/human/user, retrieval_slot)
 	return TRUE
+
+/obj/item/device/motiondetector/sg/clf_ru
+	iff_signal = FACTION_CLF
+
+/obj/item/weapon/gun/smartgun/clf/clf_ru
+	MD = /obj/item/device/motiondetector/sg/clf_ru
 
 /obj/structure/machinery/defenses/sentry/upp/clf_ru/handle_iff(selection)
 	switch(selection)
@@ -1391,7 +1449,16 @@ obj/item/device/motiondetector/hacked/clf_ru
 		if(FACTION_CLF)
 			faction_group = FACTION_LIST_CLF
 
-/obj/item
+/obj/item/device/cotablet/clf
+	desc = "A special device used by field CLF commanders."
+
+	tablet_name = "CLF Field Commander's Tablet"
+
+	announcement_title = CLF_COMMAND_ANNOUNCE
+	announcement_faction = FACTION_CLF
+	req_access = list(ACCESS_CLF_SENIOR_LEAD)
+
+	minimap_type = MINIMAP_FLAG_CLF
 
 /*
 /obj/item/clothing/head/helmet/marine/veteran/UPP
