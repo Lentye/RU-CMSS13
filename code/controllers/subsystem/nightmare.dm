@@ -134,6 +134,10 @@ SUBSYSTEM_DEF(nightmare)
 	if(!islist(parsed))
 		return
 	var/list/datum/nmnode/nodes = list()
+	//RUCM EDIT START
+	//if(GLOB.clients < 20 & parsed.name)
+	//	parsed.choices.values.value.?lvevent.?value in list(SSNightmare.hostile_survivor_scenarios[lvevent])
+	//RUCM EDIT END
 	if(!parsed["type"]) // This is a JSON array
 		for(var/list/spec as anything in parsed)
 			var/datum/nmnode/N = read_node(spec)
