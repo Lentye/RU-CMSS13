@@ -19,3 +19,8 @@ endmap
 map almayer_ru
 	default
 endmap
+
+map pacifier_ru
+	maxplayers 30
+	voteweight 0
+endmap

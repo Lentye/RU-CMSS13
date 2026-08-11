@@ -26,6 +26,10 @@ endmap
 map prison_station_fop_ru
 endmap
 
+map ground_warfare
+	voteweight = 0
+endmap
+
 map fiorina_sciannex
 	minplayers 130
 endmap

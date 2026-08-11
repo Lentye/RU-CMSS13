@@ -1,0 +1,1 @@
+#define MODE_TERRAPROBLEM (1<<15)

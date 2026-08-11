@@ -1,0 +1,7 @@
+#define MODE_TERRAPROBLEM_X_MAJOR "TerraProblem Xenomorph Major Victory"
+#define MODE_TERRAPROBLEM_M_MAJOR "TerraProblem Marine Major Victory"
+#define MODE_TERRAPROBLEM_P_MAJOR "TerraProblem Predator Major Victory"
+#define MODE_TERRAPROBLEM_X_MINOR "TerraProblem Xenomorph Minor Victory"
+#define MODE_TERRAPROBLEM_M_MINOR "TerraProblem Marine Minor Victory"
+#define MODE_TERRAPROBLEM_P_MINOR "TerraProblem Preadtor Minor Victory"
+#define MODE_TERRAPROBLEM_DRAW_DEATH "DRAW: TerraProblem Mutual Annihilation"

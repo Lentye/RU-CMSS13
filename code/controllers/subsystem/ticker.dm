@@ -120,7 +120,10 @@ SUBSYSTEM_DEF(ticker)
 					/datum/controller/subsystem/vote/proc/initiate_vote,
 					"gamemode",
 					"SERVER",
+					/*RUCM START
 					CALLBACK(src, PROC_REF(handle_map_reboot)),
+					*/
+					CALLBACK(src, PROC_REF(handle_ship_reboot)),
 					TRUE
 				), 3 SECONDS)
 				Master.SetRunLevel(RUNLEVEL_POSTGAME)
@@ -173,6 +176,18 @@ SUBSYSTEM_DEF(ticker)
 		CALLBACK(src, PROC_REF(Reboot)),
 		TRUE
 	), 3 SECONDS)
+
+//RUCM START
+/datum/controller/subsystem/ticker/proc/handle_ship_reboot()
+	addtimer(CALLBACK(
+		SSvote,
+		/datum/controller/subsystem/vote/proc/initiate_vote,
+		"shipmap",
+		"SERVER",
+		CALLBACK(src, PROC_REF(handle_map_reboot)),
+		TRUE
+	), 3 SECONDS)
+//RUCM END
 
 /datum/controller/subsystem/ticker/proc/setup()
 	to_chat(world, SPAN_BOLDNOTICE("Enjoy the game!"))
